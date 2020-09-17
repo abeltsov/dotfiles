@@ -8,6 +8,12 @@ case $- in
       *) return;;
 esac
 
+# This will enable history verification so that commands that are matched by the !, !!, and !? designators are not blindly executed, but instead filled in on the command line so you can ensure they will do no evil before executing them
+shopt -s histverify
+
+# By default Bash first searches regular names in PATH first. Disable it. Current dir first.
+shopt -u sourcepath
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -88,7 +94,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -halF'
 alias la='ls -A'
 alias l='ls -CF'
 

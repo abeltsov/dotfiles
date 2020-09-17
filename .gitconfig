@@ -1,0 +1,32 @@
+# -*- encoding: utf-8 -*-
+
+[user]
+    name = Anton Beltsov 
+    email = abeltsov@gmail.com 
+[status]
+    showUntrackedFiles = all
+[core]
+    editor = vim
+
+[push]
+    default = simple
+
+[color]
+    ui = True
+[merge]
+    conflictstyle = diff3
+    tool = vimdiff
+    prompt = false
+
+[alias]
+    co = checkout
+    ammend = commit --amend
+
+    lol = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen%cr %C(bold blue)%an%Creset' --abbrev-commit 
+
+[mergetool]
+	keepBackup = false
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false

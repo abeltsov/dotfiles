@@ -1,7 +1,8 @@
 set nocompatible
-set ignorecase smartcase
+set incsearch ignorecase smartcase
 set syntax=on
 set hlsearch
+set nowrap
 
 set t_Co=256
 set background=dark
